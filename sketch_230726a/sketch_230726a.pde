@@ -1,5 +1,5 @@
 PImage img;
-Agent[] agents = new Agent[5000];
+Agent[] agents = new Agent[500];
 PGraphics pg;
 PImage mask;
 
@@ -30,6 +30,7 @@ void setup() {
   //mask = loadImage("mask.jpg");
 
   //pg = createGraphics(width, height);
+  background(255);
 }
 
 void draw() {
@@ -46,4 +47,7 @@ void draw() {
   ////pg.mask(img);
   //pg.endDraw();
   //image(pg, 0, 0);
+    if (keyPressed) {
+    save("data/result.jpg");
+  }
 }

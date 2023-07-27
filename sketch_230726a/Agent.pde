@@ -2,7 +2,7 @@ class Agent {
   float x = random(0, img.width);
   float y = random(0, img.height);
   float r = random(0.1, 2);
-  color fill = color((int)random(30, 256), (int)random(30, 256), (int)random(30, 256));
+  color fill = color((int)random(0, 200), (int)random(0, 200), (int)random(3, 200));
   float speedX = random(-5, 5);
   float speedY = random(-5, 5);
 

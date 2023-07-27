@@ -15,10 +15,10 @@ void setup() {
   stroke(0);
   smooth();
   frameRate(1000);
-  img = loadImage("girl1.jpg");
+  img = loadImage("girl2.jpg");
   //background(255);
-  px = width/2;
-  py = height/2;
+  px = img.width/2;
+  py = img.height/2;
   x = px + cos(angle)*scalar;
   y = py + sin(angle)*scalar;
 }
@@ -28,7 +28,7 @@ void draw() {
 
   try {
     //float r = map(brightness(img.pixels[(int)y*width+(int)x]), 0, 255, 4, 0);
-    float alpha = map(brightness(img.pixels[(int)y*width+(int)x]), 0, 255, 1, 0);
+    float alpha = map(brightness(img.pixels[(int)y*width+(int)x]), 0, 255, 3, 0);
 
     strokeWeight(alpha);
     line(px, py, x, y);
@@ -41,4 +41,7 @@ void draw() {
   y = y + sin(angle)*scalar;
   scalar += speedScalar;
   angle += speedAngle;
+  if (keyPressed) {
+    save("data/result.jpg");
+  }
 }
