@@ -2,12 +2,13 @@ PImage img;
 Agent[] agents = new Agent[500];
 PGraphics pg;
 PImage mask;
+String filename = "girl1.jpg";
 
 void setup() {
   size(1280, 800);
   noStroke();
   frameRate(30);
-  img = loadImage("girl1.jpg");
+  img = loadImage(filename);
   for (int i=0; i<agents.length; ++i) {
     agents[i] = new Agent();
   }
@@ -47,7 +48,7 @@ void draw() {
   ////pg.mask(img);
   //pg.endDraw();
   //image(pg, 0, 0);
-    if (keyPressed) {
-    save("data/result.jpg");
+  if (keyPressed) {
+    save("data/result_"+filename);
   }
 }

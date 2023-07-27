@@ -15,7 +15,7 @@ void setup() {
   stroke(0);
   smooth();
   frameRate(1000);
-  img = loadImage("girl2.jpg");
+  img = loadImage("girl1.jpg");
   //background(255);
   px = img.width/2;
   py = img.height/2;
@@ -28,7 +28,7 @@ void draw() {
 
   try {
     //float r = map(brightness(img.pixels[(int)y*width+(int)x]), 0, 255, 4, 0);
-    float alpha = map(brightness(img.pixels[(int)y*width+(int)x]), 0, 255, 3, 0);
+    float alpha = map(brightness(img.pixels[(int)y*width+(int)x]), 0, 255, 2, 0);
 
     strokeWeight(alpha);
     line(px, py, x, y);
