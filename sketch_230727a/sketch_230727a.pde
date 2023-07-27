@@ -8,7 +8,7 @@ float py;
 float speedScalar = 0.005;
 float speedAngle = 0.07;
 float scalar = 0.0;
-float angle = 0.0;
+float angle = PI;
 void setup() {
   size(1280, 817);
   fill(0);
@@ -31,10 +31,11 @@ void draw() {
     float alpha = map(brightness(img.pixels[(int)y*width+(int)x]), 0, 255, 2, 0);
 
     strokeWeight(alpha);
-    line(px, py, x, y);
+    //line(px, py, x, y);
   }
   catch(Exception ex) {
   }
+  line(px, py, x, y);
   px = x;
   py = y;
   x = x + cos(angle)*scalar;
