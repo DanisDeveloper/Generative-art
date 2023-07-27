@@ -1,8 +1,8 @@
 class Agent {
   float x = random(0, img.width);
   float y = random(0, img.height);
-  float r = random(0.1, 5);
-  color fill = color((int)random(0, 256), (int)random(0, 256), (int)random(0, 256));
+  float r = random(0.1, 2);
+  color fill = color((int)random(30, 256), (int)random(30, 256), (int)random(30, 256));
   float speedX = random(-5, 5);
   float speedY = random(-5, 5);
 
@@ -17,12 +17,14 @@ class Agent {
       speedY *= -1;
       y += speedY;
     }
-    float angle = random(-5, 5);
-    float tx = speedX;
-    float ty = speedY;
-    angle = radians(angle);
-    speedX = tx*cos(angle) - ty * sin(angle);
-    speedY = tx*sin(angle) + ty * cos(angle);
+    x = constrain(x,0,width-1);
+    y = constrain(y,0,height-1);
+    //float angle = random(-5, 5);
+    //float tx = speedX;
+    //float ty = speedY;
+    //angle = radians(angle);
+    //speedX = tx*cos(angle) - ty * sin(angle);
+    //speedY = tx*sin(angle) + ty * cos(angle);
   }
 
   void display() {
