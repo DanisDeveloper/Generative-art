@@ -3,10 +3,10 @@ class Agent {
   float y = random(img.height);
   float px = x;
   float py = y;
-  float speedX = 1*((int)random(0,2) == 0 ? 1 : -1);
-  float speedY = 1*((int)random(0,2) == 0 ? 1 : -1);
-  
-  
+  float speedX = random(-5,5);
+  float speedY = random(-5,5);
+
+
   void step() {
     px = x;
     py = y;
@@ -18,9 +18,13 @@ class Agent {
     if (y < 0 || y > height) {
       speedY *= -1;
     }
+    if (random(0, 1) < 0.01) {
+      speedX = random(-5,5);
+      speedY = random(-5,5);
+    }
   }
   void display() {
     stroke(0);
-    line(px,py,x,y);
+    line(px, py, x, y);
   }
 }

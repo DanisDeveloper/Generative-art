@@ -1,5 +1,5 @@
 PImage img;
-Agent[] agents = new Agent[300];
+Agent[] agents = new Agent[100];
 String filename = "girl1.jpg";
 void setup() {
   size(600, 600);
