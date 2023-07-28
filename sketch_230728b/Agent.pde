@@ -7,7 +7,7 @@ class Agent {
   int pointer = 0;
 
   Agent() {
-    for (int i=0; i<img.height/sizeText * 0.5; ++i)
+    for (int i=0; i<img.height/sizeText * 0.9; ++i)
       str += alphabet.charAt((int)random(0, alphabet.length()));
   }
 
