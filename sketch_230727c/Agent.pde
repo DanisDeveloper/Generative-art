@@ -1,11 +1,13 @@
 class Agent {
-  float speedScalar = 0.0033;
-  float speedAngle = 0.005;
+  float speedScalar = 0.001;
+  float speedAngle = 0.002;
   float scalar = 0.1;
   float angle = 0.0;
 
-  float px = img.width/2;
-  float py = img.height/2;
+  //float px = img.width/2;
+  //float py = img.height/2;
+    float px = 0;
+  float py = 0;
   float x;
   float y;
 

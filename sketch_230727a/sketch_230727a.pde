@@ -1,5 +1,5 @@
 PImage img;
-String filename = "girl1.jpg";
+String filename = "girl2.jpg";
 
 
 float x;

@@ -1,7 +1,7 @@
 PImage img;
 String filename = "girl1.jpg";
 
-Agent[] agents = new Agent[150];
+Agent[] agents = new Agent[500];
 void setup() {
   size(1280, 817);
   fill(0);
@@ -25,7 +25,7 @@ void draw() {
     }
     catch(Exception ex) {
     }
-    if(frameCount >100)
+    //if(frameCount >100)
       line(agents[i].px, agents[i].py, agents[i].x, agents[i].y);
     agents[i].step();
   }
