@@ -1,4 +1,5 @@
 PImage img;
+String filename = "girl1.jpg";
 
 
 float x;
@@ -15,7 +16,7 @@ void setup() {
   stroke(0);
   smooth();
   frameRate(1000);
-  img = loadImage("girl1.jpg");
+  img = loadImage(filename);
   //background(255);
   px = img.width/2;
   py = img.height/2;
@@ -43,6 +44,6 @@ void draw() {
   scalar += speedScalar;
   angle += speedAngle;
   if (keyPressed) {
-    save("data/result.jpg");
+    save("data/result_" + filename);
   }
 }

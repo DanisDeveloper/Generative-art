@@ -1,20 +1,19 @@
 PImage img;
+Agent[] agents = new Agent[300];
 String filename = "girl1.jpg";
-
-Agent[] agents = new Agent[150];
 void setup() {
-  size(1280, 817);
-  fill(0);
-  stroke(0);
-  smooth();
+  size(600, 600);
   frameRate(1000);
+  smooth(8);
   img = loadImage(filename);
-  //background(255);
   for (int i=0; i<agents.length; ++i) {
-    agents[i] = new Agent((TWO_PI/agents.length)*i);
+    agents[i] = new Agent();
   }
 }
+
+
 void draw() {
+  //println(frameRate);
   surface.setSize(img.width, img.height);
   img.loadPixels();
   for (int i=0; i<agents.length; ++i) {
@@ -25,10 +24,13 @@ void draw() {
     }
     catch(Exception ex) {
     }
-    if(frameCount >100)
-      line(agents[i].px, agents[i].py, agents[i].x, agents[i].y);
     agents[i].step();
+    agents[i].display();
   }
+
+
+
+
   if (keyPressed) {
     save("data/result_" + filename);
   }
